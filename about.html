@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+}
+
+/* Header and Navigation */
+nav {
+    height: 200px;
+    width: 100%;
+    background-color: #59C6BC;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 300px;
+    height: 120px;
+    padding-top: 20px;
+    display: block;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #333;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main > div {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+main h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+main p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+#sch {
+    font-style: italic;
+    color: blue;
+}
+
+.gitar {
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    text-align: center;
+    color: white;
+    border-radius: 8px;
+    height: 200px;
+}
+
+/* Teacher Section */
+.teacher {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.teachers-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.teacher-item {
+    flex: 1 1 300px;
+    max-width: 300px;
+    margin: 10px;
+    text-align: center;
+}
+
+.teacher-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.teacher-item h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.teacher-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.teacher-item i {
+    font-size: 1.5rem;
+    margin: 5px;
+    color: #59C6BC;
+    cursor: pointer;
+}
+
+/* Address, Instagram, and Open Hours */
+#address {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+#address > div {
+    flex: 1 1 300px;
+    text-align: center;
+}
+
+#instagram img {
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+    border-radius: 4px;
+}
+
+#open, #address > div {
+    padding: 20px;
+}
+
+#address h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#address i {
+    font-size: 1.5rem;
+    color: #59C6BC;
+    margin-right: 5px;
+}
+
+/* Map */
+#map {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.ma-p {
+    width: 100%;
+    max-width: 600px;
+    height: 450px;
+    border: 0;
+}
+
+/* Footer */
+#footer {
+    background-color: rgb(22, 110, 110);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+#foot i {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    cursor: pointer;
+    color: #59C6BC;
+}
+
+#foot p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    nav {
+        height: 180px;
+    }
+
+    .logo {
+        width: 250px;
+        height: 100px;
+    }
+
+    .nav-menu {
+        gap: 15px;
+    }
+
+    .nav-menu a {
+        font-size: 1rem;
+    }
+
+    main h1 {
+        font-size: 2rem;
+    }
+
+    .teachers-container {
+        justify-content: center;
+    }
+
+    .teacher-item {
+        flex: 1 1 250px;
+    }
+
+    #address {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ma-p {
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        height: 150px;
+    }
+
+    .logo {
+        width: 200px;
+        height: 80px;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 5px 0;
+    }
+
+    .nav-menu a {
+        font-size: 0.9rem;
+    }
+
+    main h1 {
+        font-size: 1.8rem;
+    }
+
+    main p {
+        font-size: 0.9rem;
+    }
+
+    .gitar {
+        padding: 20px;
+    }
+
+    .teacher-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    #instagram img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .ma-p {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        height: 120px;
+    }
+
+    .logo {
+        width: 150px;
+        height: 60px;
+    }
+
+    .nav-menu {
+        gap: 6px;
+    }
+
+    .nav-menu a {
+        font-size: 0.6rem;
+    }
+
+    main h1 {
+        font-size: 1.5rem;
+    }
+
+    main p {
+        font-size: 0.8rem;
+    }
+
+    .gitar {
+        padding: 15px;
+    }
+
+    #address h3 {
+        font-size: 1.2rem;
+    }
+
+    #address i {
+        font-size: 1.2rem;
+    }
+
+    #instagram img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .ma-p {
+        height: 250px;
+    }
+
+    #foot i {
+        font-size: 1.2rem;
+    }
+
+    #foot p {
+        font-size: 0.8rem;
+    }
+}
+</style>
+<body>
+    <header>
+        <nav>
+            <div>
+                <img class="logo" src="https://melody.ancorathemes.com/wp-content/uploads/2016/04/Untitled-1.png"
+                    alt="Music School Logo">
+            </div>
+            <div class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="page.html">Page</a>
+                <a href="about.html">About</a>
+                <a href="classes.html">Classes</a>
+                <a href="contact.html">Contact</a>
+                <a href="book.html">Book Online</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <h1>About</h1>
+            <p id="sch">school</p>
+            <p>Our professional approach and continual development has led us to becoming the leading provider of professional music education. We combine innovative, fun and creative ways to teach music and engage with students to reach their full potential. Innovative music lessons and classes from beginner through advanced for children, teens, and adults. We are the best music school for you. We have programs to suit everyone’s needs.</p>
+            <p>We are the only professional music school offering lessons for children, adults and seniors.Peter Caroll</p>
+        </div>
+        <div style="background-image: url(gitar.img);" class="gitar">
+            <h1>Melody Music School</h1>
+            <p>We have talented and very experienced instructors who teach piano, violin, guitar, cello, and other instruments,</p>
+        </div>
+        <section class="teacher">
+            <h1>Featured Teachers</h1>
+            <p id="staf">Staff</p>
+            <div class="teachers-container">
+                <div class="teacher-item">
+                    <img src="teacher1.png" alt="Tim Caroll - cellist">
+                    <h3>Tim Caroll</h3>
+                    <p>Professional Cellist</p>
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-square-x-twitter"></i>
+                    <i class="fa-brands fa-square-instagram"></i>
+                </div>
+                <div class="teacher-item">
+                    <img src="teacher2.png" alt="Amanda Snow - pianist">
+                    <h3>Amanda Snow</h3>
+                    <p>Professional Pianist</p>
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-square-x-twitter"></i>
+                    <i class="fa-brands fa-square-instagram"></i>
+                </div>
+                <div class="teacher-item">
+                    <img src="teacher3.png" alt="Terry Barton - violinist">
+                    <h3>Terry Barton</h3>
+                    <p>Professional Violinist</p>
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-square-x-twitter"></i>
+                    <i class="fa-brands fa-square-instagram"></i>
+                </div>
+            </div>
+        </section>
+        <section id="address">
+            <div>
+                <h3>Address</h3>
+                <i class="fa-solid fa-location-dot"></i>
+                <p>110 E 16th St<br>New York, NY</p>
+            </div>
+            <div id="instagram">
+                <h3>Instagram</h3>
+                <br />
+                <br />
+                <br />
+                <img src="insta1.jpg" alt="load">
+                <img src="insta2.jpg" alt="load">
+                <img src="insta3.jpg" alt="load">
+                <img src="insta4.jpg" alt="load">
+                <img src="insta5.jpg" alt="load">
+                <img src="insta6.jpg" alt="load">
+                <img src="insta7.jpg" alt="load">
+                <img src="insta8.jpg" alt="load">
+            </div>
+            <div id="open">
+                <h3>Open hours</h3>
+                <i class="fa-solid fa-clock"></i>
+                <p>Monday - Friday: 12pm - 8pm<br>Saturday: 10am - 2pm</p>
+            </div>
+        </section>
+        <section id="map">
+            <div>
+                <iframe class="ma-p"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4966.618523813374!2d-0.127193!3d51.507542!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C%20UK!5e0!3m2!1sen!2sus!4v1746959065903!5m2!1sen!2sus"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <div id="foot">
+            <i id="i1" class="fa-brands fa-square-facebook"></i>
+            <i id="i2" class="fa-brands fa-x-twitter"></i>
+            <i id="i3" class="fa-brands fa-instagram"></i>
+            <p>AncoraThemes© 2025 All rights reserved Terms of use and Privacy Policy</p>
+        </div>
+    </footer>
+</body>
+</html>

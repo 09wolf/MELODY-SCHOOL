@@ -1,0 +1,747 @@
+/* General Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background: url('https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae') no-repeat center center/cover;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.logo {
+    width: 150px;
+}
+
+/* Navbar Styles */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    position: relative;
+}
+
+.nav-menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+    color: #ffd700;
+}
+
+/* Book Online Button */
+.book-online {
+   
+    padding: 8px 15px;
+    border-radius: 10px;
+     border: solid 1px;
+    color: yellow;
+}
+
+
+/* Note Section */
+.note {
+    padding: 40px 20px;
+}
+
+.start {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.start2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.button1 {
+    background: #ffd700; 
+    border: none;
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease;
+}
+
+.button1:hover {
+    background: #ffcc00;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-1px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .logo {
+        width: 130px;
+    }
+
+    .nav-menu {
+        gap: 15px;
+        padding: 15px 0;
+    }
+
+    .nav-menu li a {
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
+
+   
+
+    .start {
+        font-size: 2.2rem;
+    }
+
+    .start2 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width: 110px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+        align-items:center;
+    }
+
+    .nav-menu li a {
+        font-size: 0.9rem;
+        padding: 8px 10px;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        border-radius: 0;
+        background: #f9f9f9;
+        min-width: 100%;
+    }
+
+    .dropdown-content li a {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: none; 
+    }
+
+    .dropdown.active .dropdown-content {
+        display: block; 
+    }
+
+    .note {
+        padding: 30px 15px;
+    }
+
+    .start {
+        font-size: 2rem;
+    }
+
+    .start2 {
+        font-size: 1.4rem;
+    }
+
+    .button1 {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 100px;
+    }
+
+    .nav-menu li a {
+        font-size: 0.85rem;
+        padding: 6px 8px;
+    }
+
+    .book-online {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+
+    .dropdown-content li a {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+    }
+
+    .note {
+        padding: 20px 10px;
+    }
+
+    .start {
+        font-size: 1.8rem;
+    }
+
+    .start2 {
+        font-size: 1.2rem;
+    }
+
+    .button1 {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Responsive adjustment */
+@media (max-width: 480px) {
+    .button1 {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+/* Sidebar Container */
+.sidebar {
+    position: fixed; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    left: 20px; 
+    display: flex;
+    flex-direction: column; 
+    gap: 15px; 
+    z-index: 1000; 
+}
+
+/* Sidebar Items (Buttons) */
+.sidebar-item {
+    background: #26a69a; 
+    width: 50px; 
+    height: 50px; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    transition: all 0.3s ease;  
+    cursor: pointer; 
+}
+
+/* Icons */
+.sidebar-item i {
+    font-size: 1.5rem; 
+    color: #fff; 
+}
+
+/* Hover Effect */
+.sidebar-item:hover {
+    background: #1de9b6; 
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        left: 10px; 
+        gap: 10px;
+    }
+
+    .sidebar-item {
+        width: 40px; 
+        height: 40px;
+    }
+
+    .sidebar-item i {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        top: auto; 
+        bottom: 80px; 
+        transform: none; 
+        left: 95%; 
+        transform: translateX(-50%);
+        flex-direction: column; 
+        gap: 5px;
+    }
+
+    .sidebar-item {
+        width: 35px;
+        height: 35px;
+    }
+
+    .sidebar-item i {
+        font-size: 1rem;
+    }
+}
+/* Hero Section */
+.hero {
+    padding: 40px 20px;
+    background: #f9f9f9;
+}
+
+.main11, .main22-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.p1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.p2 {
+    font-size: 1.2rem;
+    margin: 15px 0;
+    color: #666;
+}
+
+.more, .herobutton {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.more:hover, .herobutton:hover {
+    background: #555;
+}
+
+.summer {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.main22-text {
+    padding: 20px;
+}
+
+.main21 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.main221 {
+    font-size: 1.1rem;
+    color: #666;
+    margin: 15px 0;
+}
+
+/* Music Groups Section */
+.goup {
+    padding: 40px 20px;
+}
+#video{
+     color: blue;
+    font-size: 0.5rem;
+    font-style: italic;
+}
+.music, .musicmake, .school {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.gp h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.gp1 {
+    font-size: 1.5rem;
+    color: #666;
+}
+
+.music11 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.d1 img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.d11, .private {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+.make{
+    background-image: url(piano2.jpg);
+    background-size: cover;
+     padding: 80px 25px;
+     text-align: center;
+     margin-top: 60px;
+    }
+.make1 {
+    font-size: 2.5rem;
+    color: white;
+
+}
+
+.make2 {
+    font-size: 0.5rem;
+    color: white;
+    margin: 15px 0;
+}
+
+.makebutton {
+    background: #ffd700;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.makebutton:hover {
+    background: #e6c200;
+}
+.school{
+    margin-top: 70px;
+}
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Instruments Section */
+.instrument {
+    padding: 40px 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.instrument h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.instrument p {
+    font-size: 1.5rem;
+    color: #666;
+}
+#cls{
+    color: blue;
+    font-size: 0.5rem;
+    font-style: italic;
+}
+.instrument-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.ins {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    flex: 1;
+}
+
+.instrument-item {
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.instrument-item i {
+    font-size: 2rem;
+    color: #ffd700;
+    margin-bottom: 10px;
+}
+
+.ment {
+    text-align: center;
+    padding: 20px;
+    background-color: aqua;
+}
+
+.ment h1 {
+    font-size: 2rem;
+}
+
+.ment h2 {
+    font-size: 1.5rem;
+    color: #ffd700;
+}
+
+.ment1 {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.ment1:hover {
+    background: #555;
+}
+
+/* News Section */
+.news1 {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.news1 h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+#blog{ 
+    font-size: 0.5rem;
+   color: blue;
+    font-style: italic;
+
+}
+.news1 p {
+    font-size: 1.5rem;
+    color: #666;
+}
+
+.news-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.news-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.news2 {
+    margin-top: 50px;
+    text-align: center;
+    background-color: #555;
+    color: white;
+    border-radius: 10px;
+}
+
+.news2 img {
+     margin-top: 50px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 200px;
+}
+
+.news2 blockquote {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #666;
+    margin: 20px 0;
+}
+
+.news2 cite {
+    font-size: 1rem;
+    color:blue;
+    font-style: italic;
+}
+
+/* Teachers Section */
+.teacher {
+    padding: 40px 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.teacher h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.teacher p {
+    font-size: 1.5rem;
+    color: #666;
+}
+#staf{
+     font-size: 0.5rem;
+    color: blue;
+    font-style: italic;
+}
+.teachers-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.teacher-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.teacher-item i {
+    font-size: 1.5rem;
+    margin: 10px 5px;
+    color: #333;
+    cursor: pointer;
+}
+
+.teacher-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.teach3 {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Address, Instagram, Open Hours, Map Sections */
+#address, #open, #instagram {
+    padding: 20px;
+    text-align: center;
+}
+
+#address h3, #open h3, #instagram h3 {
+    font-size: 1.8rem;
+    color: #333;
+}
+
+#address i, #open i {
+    font-size: 1.5rem;
+    color: #ffd700;
+    margin: 10px 0;
+}
+
+#instagram img {
+    width: 100px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+#map {
+    padding: 20px;
+    text-align: center;
+}
+
+.ma-p {
+    width: 100%;
+    max-width: 600px;
+    height: 450px;
+    border: none;
+}
+
+/* Footer Styles */
+#footer {
+    background: rgb(10, 214, 214);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+#foot i {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+#foot p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .start {
+        font-size: 1.8rem;
+    }
+
+    .start2 {
+        font-size: 1.4rem;
+    }
+
+    .main22-container {
+        flex-direction: column;
+    }
+
+    .instrument-container {
+        flex-direction: column;
+    }
+
+    .news-container, .teachers-container {
+        grid-template-columns: 1fr;
+    }
+
+    .teacher-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 100px;
+    }
+
+    .button1, .more, .herobutton, .makebutton, .ment1 {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    .p1, .main21, .make1, .gp h1, .instrument h1, .news1 h1, .teacher h1 {
+        font-size: 1.8rem;
+    }
+
+    .p2, .main221, .make2 {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class</title>
+   
+</head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+}
+
+/* Header and Navigation */
+nav {
+    height: 200px;
+    width: 100%;
+    background-color: #59C6BC;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 300px;
+    height: 120px;
+    padding-top: 20px;
+    display: block;
+}
+
+.fa-bars {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #333;
+}
+
+.nav-menu.active {
+    display: flex;
+}
+
+.downnav {
+    width: 100%;
+    height: 60px;
+    background-color: #F0F0F0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#clas {
+    color: #59C6BC;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* Hero Section */
+.hero {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.hero div {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.hero img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.hero h2 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.hero button {
+    background-color: #59C6BC;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.hero button:hover {
+    background-color: #46a8a0;
+}
+
+/* Address, Instagram, and Open Hours */
+#address {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+#address div, #open {
+    text-align: center;
+}
+
+#address h3, #open h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+#address .fa-location-dot, #open .fa-clock {
+    color: #59C6BC;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#address p, #open p {
+    font-size: 1rem;
+    color: #666;
+}
+
+#instagram img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin: 0.5rem;
+    border-radius: 5px;
+}
+
+/* Map Section */
+#map {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.ma-p {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+}
+
+/* Footer */
+#footer {
+    background-color: rgb(21, 104, 104);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+#foot i {
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+#foot p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    nav {
+        height: 180px;
+    }
+
+    .logo {
+        width: 250px;
+        height: 100px;
+        padding-top: 15px;
+    }
+
+    .nav-menu {
+        gap: 15px;
+    }
+
+    .nav-menu a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .fa-bars {
+        display: block;
+    }
+
+   
+   .nav-menu {
+        gap: 8px;
+    }
+
+    .nav-menu a {
+        font-size: 0.8rem;
+    }
+
+    #clas {
+        font-size: 1.5rem;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    #instagram img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .ma-p {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-menu a {
+        font-size: 0.9rem;
+    }
+
+    .hero h2 {
+        font-size: 1.2rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .hero button {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    #address h3, #open h3 {
+        font-size: 1.2rem;
+    }
+
+    #address p, #open p {
+        font-size: 0.9rem;
+    }
+
+    #instagram img {
+        width: 50px;
+        height: 50px;
+    }
+}
+</style>
+<body>
+    <header>
+        <nav>
+            <div>
+                <i class="fa-solid fa-bars"></i>
+                <img class="logo" src="https://melody.ancorathemes.com/wp-content/uploads/2016/04/Untitled-1.png"
+                    alt="Music School Logo">
+            </div>
+          
+        </nav>
+        <div class="downnav">
+            <h1 id="clas">CLASSES</h1>
+        </div>
+    </header>
+    <main>
+        <div>
+            <h1>CLASSES</h1>
+            <p>and group</p>
+        </div>
+        <section class="hero">
+            <div><img src="kids1.jpg" alt="Kids classes">
+                <h2>Kids</h2>
+                <p>Our school is a solution for families who would like to expose their children to the world of music.</p>
+                <button>READ MORE</button>
+            </div>
+            <div><img src="kids2.png" alt="Teens classes">
+                <h2>Teens</h2>
+                <p>Our classes help to develop the skills necessary for music learning and a lifelong enjoyment of music.</p>
+                <button>READ MORE</button>
+            </div>
+            <div><img src="kids3.png" alt="Adults classes">
+                <h2>Adults</h2>
+                <p>We have programs for everyone. In addition to teaching music to children, we instruct adults and seniors.</p>
+                <button>READ MORE</button>
+            </div>
+            <div><img src="kids4.png" alt="Private classes">
+                <h2>Private</h2>
+                <p>Private music lessons provide one-on-one attention, so teachers can focus on an individual student’s needs.</p>
+                <button>READ MORE</button>
+            </div>
+        </section>
+        <section id="address">
+            <div>
+                <h3>Address</h3>
+                <i class="fa-solid fa-location-dot"></i>
+                <p>110 E 16th St<br>New York, NY</p>
+            </div>
+            <div id="instagram">
+                <h3>Instagram</h3>
+                <br />
+                <br />
+                <br />
+                <img src="insta1.jpg" alt="Instagram post 1">
+                <img src="insta2.jpg" alt="Instagram post 2">
+                <img src="insta3.jpg" alt="Instagram post 3">
+                <img src="insta4.jpg" alt="Instagram post 4">
+                <img src="insta5.jpg" alt="Instagram post 5">
+                <img src="insta6.jpg" alt="Instagram post 6">
+                <img src="insta7.jpg" alt="Instagram post 7">
+                <img src="insta8.jpg" alt="Instagram post 8">
+            </div>
+            <div id="open">
+                <h3>Open hours</h3>
+                <i class="fa-solid fa-clock"></i>
+                <p>Monday - Friday: 12pm - 8pm<br>Saturday: 10am - 2pm</p>
+            </div>
+        </section>
+        <section id="map">
+            <div>
+                <iframe class="ma-p"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.947567159885!2d-73.98715968459403!3d40.73607287933002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2590a7a7f4c3d%3A0x9e8f1d1b7a8f3c2!2s110%20E%2016th%20St%2C%20New%20York%2C%20NY%2010003%2C%20USA!5e0!3m2!1sen!2sus!4v1634567890123!5m2!1sen!2sus"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <div id="foot">
+            <i id="i1" class="fa-brands fa-square-facebook"></i>
+            <i id="i2" class="fa-brands fa-x-twitter"></i>
+            <i id="i3" class="fa-brands fa-instagram"></i>
+            <p>AncoraThemes© 2025 All rights reserved Terms of use and Privacy Policy</p>
+        </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.nav-menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
